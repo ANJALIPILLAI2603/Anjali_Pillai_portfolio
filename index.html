@@ -48,10 +48,6 @@
           <span>Download Resume</span>
         </a>
       </div>
-      <div class="visitors-counter">
-        <span class="dot"></span>
-        <span>Portfolio Visitors: <span id="visitorCount">Loading...</span></span>
-      </div>
     </div>
   </section>
 <section id="about" class="container section">
@@ -267,24 +263,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- ✅ Visitor Counter -->
-  <script>
-    const namespace = 'anjali-pillai-portfolio';
-    const key = 'visits';
-    const url = `https://api.countapi.xyz/hit/${namespace}/${key}`;
-
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById('visitorCount').textContent = data.value;
-      })
-      .catch(err => {
-        console.error('Counter API error:', err);
-        document.getElementById('visitorCount').textContent = 'N/A';
-      });
-  </script>
-
   <!-- ✅ Web3Forms Contact JS -->
   <script>
     const form = document.getElementById("contact-form");
